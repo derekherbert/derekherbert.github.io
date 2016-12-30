@@ -3,28 +3,42 @@
 	<head>
 		<title>Derek Herbert</title>
 		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		
+		<!-- link to bootstrap stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    
+		<!-- link to bootstrap js -->
+    	<script src="./js/bootstrap.min.js"></script>
+
+		<!-- link to jquery -->
+		<script src="./js/jquery-3.1.1"></script>
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/About">About</a></li>
-        		<li><a href="/CV">CV</a></li>
-        		<li><a href="/Helloooo">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Derek Herbert!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:derek.herbert@hotmail.com">Email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/derekherbert</a></li>
-			</ul>
-		</footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-md-4">
+					<a href="./index.html">Home</a>
+				</div>
+				<div class="col col-md-4">
+					<a href="./about.html">About</a>
+				</div>
+				<div class="col col-md-4">
+					<a href="./cv.html">CV</a>
+				</div>
+			</div>
+			<div>
+				<div class="blurb">
+					<h1>Hi there, I'm Derek Herbert!</h1>
+					<h3>I'm tall and do stuff sometimes.</h3>
+				</div><!-- /.blurb -->
+			</div>
+			<div class="row">
+				<ul>
+					<li><a href="mailto:derek.herbert@hotmail.com">derek.herbert@hotmail.com</a></li>
+					<li><a href="https://github.com/derekherbert">github.com/derekherbert</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
