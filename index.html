@@ -12,40 +12,17 @@
 		<!-- link to bootstrap stylesheet -->
 		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     
-		<!-- link to bootstrap js -->
-    	<script src="./js/bootstrap.min.js"></script>
-
 		<!-- link to jquery -->
-		<script src="./js/jquery-3.1.1"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<!-- link to bootstrap js -->
+    	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+		<!-- link to header js -->
+    	<script src="./js/header.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
-			
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class="container">
-					<input type="checkbox" id="navbar-toggle-cbox">
-					<div class="navbar-header">
-						<label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</label>
-						<a class="navbar-brand" href="#">Project name</a>
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">About</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-
-
-<br/><br/><br/>
-			
-
 			<header class="row">		
 				<div class="col col-md-offset-1 col-md-10 valign-center header-nav-bar">
 					<div class="col col-sm-6">
@@ -62,16 +39,32 @@
 						</div>
 					</div>
 					
-					<div class="col col-sm-6">
-						<ul class="list-inline no-margin pull-right header-links">
+					<div class="col col-xs-6">
+						<button id="header_dropdown_button" class="display-mobile pull-right" data-toggle="collapse" data-target="#header_dropdown"> Drop </button>                             <!-- add columns -->
+						<ul class="list-inline no-margin pull-right header-links hide-mobile">
 							<li><a href="./index.html"><h3 class="white-text no-margin">Home</h3></a></li>
 							<li><a href="./about.html"><h3 class="white-text no-margin">About</h3></a></li>
 							<li><a href="./cv.html"><h3 class="white-text no-margin">CV</h3></a></li>
 							<li><a href="./cv.html"><h3 class="white-text no-margin">Contact</h3></a></li>
 						</ul>
+						
 					</div>
 				</div>
 			</header>
+			<div id="header_dropdown_row" class="row hide">
+				<div class="col-md-offset-1 col-md-10 valign-center header-dropdown">
+					<div id="header_dropdown" class="list-group collapse full-width">
+						<a href="#" class="list-group-item">Home <span class="badge">1</span></a>
+						<a href="#" class="list-group-item">About <span class="badge">2</span></a>
+						<a href="#" class="list-group-item">CV <span class="badge">3</span></a>
+						<a href="#" class="list-group-item">Contact <span class="badge">4</span></a>
+					</div>
+				</div>
+			</div>
+
+
+
+
 			<div class="row padding-top-10">
 				<div class="col col col-md-offset-2 col-md-8">
 					<h1>Hi there, I'm Derek Herbert!</h1>
@@ -86,7 +79,7 @@
 						<div class="col col-md-3"><a href="https://miketricking.github.io/dist/"><img src="./images/jag.png" class="img-responsive" title="Java Application for GMail" height="200" width="200"/></a></div>
 						<div class="col col-md-3"><a href="https://miketricking.github.io/dist/"><img src="./images/bamboo_temple.png" class="img-responsive" title="Travel ACDZ" height="200" width="200"/></a></div>
 						<div class="col col-md-3"><a href="https://miketricking.github.io/dist/"><img src="./images/bamboo_temple.png" class="img-responsive" title="Online Portfolio" height="200" width="200"/></a></div>
-					</ul>
+					</div>
 				</div>
 			</div>
 			<br /><br /><br /><br /><br />
