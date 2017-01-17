@@ -16,6 +16,9 @@
     border-radius: 0px 0px 10px 10px !important;
 }
 
+.repo-logos img {
+    padding-top: 15%;
+}
 
 @media (max-width: 850px) {  
     .hide-mobile {
@@ -37,6 +40,11 @@
     .header-title h4 {
         font-size: 14px;
     }
+    .col-xs-5, .col-xs-offset-1 {
+        width: 100% !important;
+        margin: 0px !important;
+    }
+    
 }
 
 @media (max-width: 420px) {  
@@ -49,8 +57,18 @@
 }
 
 
+#header_dropdown_button {
+     background-color: #1e1e1e; 
+     border-radius: 5px; 
+     color: #ffffff;
+     font-size: 25px; 
+     padding-top: 3px; 
+     padding-bottom: 4px;
+}
 
-
+#header_dropdown_button:focus {
+    outline: 0;
+}
 .full-width {
     width: 100% !important;
 }
