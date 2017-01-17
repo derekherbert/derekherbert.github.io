@@ -30,6 +30,24 @@
     
 }
 
+@media (max-width: 500px) {  
+    .header-title h1 {
+        font-size: 24px;
+    }
+    .header-title h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {  
+    .header-title {
+        display: none;
+    }
+    .tiny-screen {
+        text-align: center;
+    }
+}
+
 
 
 
