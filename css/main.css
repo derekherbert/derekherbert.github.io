@@ -116,3 +116,28 @@ header {
 .no-margin {
     margin: 0px !important;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 70px;
+
+    
+
+background: #ECE9E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(#ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#FFFFFF , #d1c7e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+        
+}
+.footer {
+    position: absolute !important;
+    bottom: 0;
+    /* Set the fixed height of the footer here */
+    height: 70px;
+    border-top: 1px solid #b2b2b2;
+}
