@@ -2,86 +2,69 @@
 <html lang="en">
 	<head>
 		<title>Derek Herbert</title>
-
-		<!-- ensure proper rendering and touch zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
-
-		<!-- link to hover-effects stylesheet -->                              
 		<link rel="stylesheet" type="text/css" href="./css/hover-effects.css">
-		
-		<!-- link to bootstrap stylesheet -->
 		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    
-		<!-- link to jquery -->
 		<script src="./js/jquery-3.1.1.min.js"></script>
-
-		<!-- link to bootstrap js -->
     	<script src="./js/bootstrap.min.js"></script>
-
-		<!-- link to header js -->
     	<script src="./js/header.js"></script>
-		
 	</head>
 	<body>
 		<div class="container-fluid">
+
+			<!-- Header -->
 			<header class="row">		
 				<div class="col col-md-offset-1 col-md-10 valign-center header-nav-bar">
 					<div class="col col-xs-10 col-sm-7 col-md-6">
 						<div class="row valign-center tiny-screen">
-							<div class="col padding-right-10">
-								<a href="./index.html"><img src="./images/logo_blue.png" class="img-circle" style="border: 2px solid white;" title="Derek Herbert" height="125" width="125"/></a>
+							<div class="col">
+								<a href="./index.html"><img id='header-icon' src="./images/logo_blue.png" class="img-circle" title="Derek Herbert" height="120" width="120"/></a>
 							</div>
-							<div class="col padding-left-10">
+							<div class="col header-title-div">
 								<ul class="no-margin list-unstyled header-title">
 									<li><h1 class="white-text no-margin">Derek Herbert</h1></li>
-									<li><h4 class="white-text no-margin">Software Developer</h4></li>
+									<li><h4 class="white-text no-margin header-subtitle">Portfolio</h4></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					
 					<div class="col col-xs-2 col-sm-6 col-md-6">
 						<button id="header_dropdown_button" class="display-mobile pull-right" data-toggle="collapse" data-target="#header_dropdown"> 
 							<span class="glyphicon glyphicon-menu-hamburger valign-center"></span>
-						</button>                              <!-- add columns -->
-						<!--<button type="button" class="collapsed pull-right" data-toggle="collapse" data-target="#header_dropdown" aria-expanded="false">
-							<span class="glyphicon glyphicon-menu-hamburger"></span>
-						</button>-->
+						</button>                             
 						<ul class="list-inline no-margin pull-right header-links hide-mobile">
 							<li><a href="./index.html"><h3 class="white-text no-margin">Home</h3></a></li>
-							<li><a href="./about.html"><h3 class="white-text no-margin">About</h3></a></li>
-							<li><a href="./cv.html"><h3 class="white-text no-margin">CV</h3></a></li>
-							<li><a href="./cv.html"><h3 class="white-text no-margin">Contact</h3></a></li>
+							<li><a href="./bio.html"><h3 class="white-text no-margin">Bio</h3></a></li>
+							<li><a href="./code.html"><h3 class="white-text no-margin">Code</h3></a></li>
+							<li><a href="./contact.html"><h3 class="white-text no-margin">Contact</h3></a></li>
 						</ul>
-						
 					</div>
 				</div>
 			</header>
+
+			<!-- Header Dropdown -->
 			<div id="header_dropdown_row" class="row hide">
 				<div class="col-md-offset-1 col-md-10 valign-center header-dropdown">
 					<div id="header_dropdown" class="list-group collapse full-width">
 						<a href="#" class="list-group-item">Home <span class="badge">1</span></a>
-						<a href="#" class="list-group-item">About <span class="badge">2</span></a>
-						<a href="#" class="list-group-item">CV <span class="badge">3</span></a>
+						<a href="#" class="list-group-item">Bio <span class="badge">2</span></a>
+						<a href="#" class="list-group-item">DIY <span class="badge">3</span></a>
 						<a href="#" class="list-group-item">Contact <span class="badge">4</span></a>
 					</div>
 				</div>
 			</div>
 
-
-			<br /><br />
-
-			<div class="row padding-top-10">
+			<!-- Content Heading-->
+			<div class="row content-heading">
 				<div class="col col col-md-offset-2 col-md-8">
 					<h1><span style="background-color: #ffffff;">Hi, I'm Derek Herbert!</span></h1>
 					<h3><span style="background-color: #ffffff;">I'm a computer science student at Concordia University. Here are some of my projects!</span></h3>
 				</div>
 			</div>
-			<br />
-			<div class="row padding-top-10">
+
+			<!-- Content Body-->
+			<div class="row content-body">
 				<div class="col-md-offset-2 col-md-8">
 					<div class="row repo-logos">
 						<div class="col-lg-3 col-lg-offset-0 col-xs-5 col-xs-offset-1 hovereffect">
@@ -127,19 +110,18 @@
 					</div>
 				</div>
 			</div>
-			<br /><br /><br /><br /><br /><br /><br /><br />
-			
-			<footer class="row fade-bottom">
+
+			<!-- Footer -->
+			<footer class="row">
 				<div class="col-sm-offset-1 col-sm-10 col-xs-12">
-					<ul class="list-inline no-margin text-center" style="padding-top: 80px;">
-						<li><a href="mailto:derek.herbert@hotmail.com"><img src="./images/email.png" class="img-circle center-block" title="Email" height="55" width="55"/></a></li>
-						<li><a href="https://ca.linkedin.com/in/derek-herbert-578991106"><img src="./images/linked_in.png" class="img-circle center-block" title="Linked In" height="55" width="55"/></a></li>
-						<li><a href="https://github.com/derekherbert"><img src="./images/github.png" class="img-circle center-block" title="GitHub" height="55" width="55"/></a></li>
+					<ul class="list-inline no-margin text-center">
+						<li><a href="mailto:derek.herbert@hotmail.com"><img src="./images/email.png" class="img-circle center-block" title="Email" height="50" width="50"/></a></li>
+						<li><a href="https://ca.linkedin.com/in/derek-herbert-578991106"><img src="./images/linked_in.png" class="img-circle center-block" title="Linked In" height="50" width="50"/></a></li>
+						<li><a href="https://github.com/derekherbert"><img src="./images/github.png" class="img-circle center-block" title="GitHub" height="50" width="50"/></a></li>
 					</ul>
 				</div>
 			</footer>
 			
 		</div>
-		
 	</body>
 </html>
