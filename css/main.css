@@ -20,6 +20,12 @@ header {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.display-none {
+    display: none !important;
+}
+.visibility-hidden {
+    visibility: hidden !important;
+}
 .display-mobile {
     display: none !important;
 }
@@ -31,12 +37,62 @@ header {
 }
 .header-dropdown {
     background-color: #1e1e1e !important; 
-    color: white !important;
+    color: #ffffff !important;
     padding-top: 35px !important;
     border-radius: 0px 0px 10px 10px !important;
 }
-.repo-logos div {
-    padding-top: 5%;
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.carousel-button button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent; 
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow: 2px 2px #9e9e9e !important;
+}
+.carousel-button button:focus {
+    outline:0;
+}
+.carousel-button button:active {
+    color: #e4e4e4;
+    font-size: 33px;
+}
+.carousel-button button:hover {
+    cursor: pointer !important;
+}
+#carousel-index {
+    text-align: center;
+    color: #cccccc50;
+    font-size: 30px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#carousel-index span {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.active-bullet {
+    color: #ffffffe5;
+}
+#carousel-left {
+    left: 70%;
+}
+#carousel-right {
+    left: 30%;
 }
 #header-icon {
     border: 2px solid #ffffff;
@@ -66,7 +122,7 @@ header {
     padding-bottom: 10px;
 }
 .content-body {
-    padding-top: 10px;
+    padding-top: 40px;
     padding-bottom: 10px;
 }
 .header-links li {
@@ -81,6 +137,59 @@ header {
 }
 .no-margin {
     margin: 0px !important;
+}
+.repo-div {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+.repo-icon {
+    border: 5px solid #1e1e1e;
+    border-radius: 50%;
+    max-width: 250px !important;
+    max-height: 250px !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.overlay-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 100%;
+    padding-top: 0px !important;
+    margin: auto;
+}
+.overlay {
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .25s ease;
+    background-color: #1B96FE;
+    border-radius: 100%;
+    border: 5px solid #1e1e1e;
+}
+.overlay:hover {
+    opacity: 1;
+}
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 @media (max-width: 850px) {  
     .hide-mobile {

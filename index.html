@@ -4,11 +4,10 @@
 		<title>Derek Herbert</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
-		<link rel="stylesheet" type="text/css" href="./css/hover-effects.css">
 		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 		<script src="./js/jquery-3.1.1.min.js"></script>
     	<script src="./js/bootstrap.min.js"></script>
-    	<script src="./js/header.js"></script>
+    	<script src="./js/main.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -49,7 +48,7 @@
 					<div id="header_dropdown" class="list-group collapse full-width">
 						<a href="#" class="list-group-item">Home <span class="badge">1</span></a>
 						<a href="#" class="list-group-item">Bio <span class="badge">2</span></a>
-						<a href="#" class="list-group-item">DIY <span class="badge">3</span></a>
+						<a href="#" class="list-group-item">Code <span class="badge">3</span></a>
 						<a href="#" class="list-group-item">Contact <span class="badge">4</span></a>
 					</div>
 				</div>
@@ -57,7 +56,7 @@
 
 			<!-- Content Heading-->
 			<div class="row content-heading">
-				<div class="col col col-md-offset-2 col-md-8">
+				<div class="col-md-offset-2 col-md-8">
 					<h1><span style="background-color: #ffffff;">Hi, I'm Derek Herbert!</span></h1>
 					<h3><span style="background-color: #ffffff;">I'm a computer science student at Concordia University. Here are some of my projects!</span></h3>
 				</div>
@@ -65,49 +64,78 @@
 
 			<!-- Content Body-->
 			<div class="row content-body">
-				<div class="col-md-offset-2 col-md-8">
-					<div class="row repo-logos">
-						<div class="col-lg-3 col-lg-offset-0 col-xs-5 col-xs-offset-1 hovereffect">
-							<div class="overlay-container">
-								<img src="./images/bamboo_temple.jpg" class="img-responsive img-circle center-block image" style="border: 5px solid #000000;" title="Bamboo Temple eBook Store" height="250" width="250"/>
-								<a href="https://github.com/derekherbert/BambooTempleBookStore">
-									<div class="overlay">
-										<div class="overlay-text">Bamboo Temple eBook Store</div>
-									</div>
-								</a>
-							</div>	
-						</div>
-						<div class="col-lg-3 col-xs-5">
-							<div class="overlay-container">
-								<img src="./images/jag.png" class="img-responsive img-circle center-block image" title="Java Application for GMail" style="border: 5px solid #000000;" height="250" width="250"/>
-								<a href="https://github.com/derekherbert/JAG">
-									<div class="overlay">
-										<div class="overlay-text">Java Application for GMail</div>
-									</div>
-								</a>
+				<div class="repo-div col-lg-2 col-lg-offset-0 col-md-offset-1 col-xs-5 col-xs-offset-1" >
+					<div class="overlay-container visibility-hidden">
+						<img src="./images/bamboo_temple.jpg" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/BambooTempleBookStore">
+							<div class="overlay">
+								<div class="overlay-text">Bamboo Temple eBook Store</div>
 							</div>
-						</div>
-						<div class="col-lg-3 col-lg-offset-0 col-xs-5 col-xs-offset-1">
-							<div class="overlay-container">
-								<img src="./images/acdz.png" class="img-responsive img-circle center-block image" style="border: 5px solid #000000;" title="Travel ACDZ" height="250" width="250"/>
-								<a href="https://github.com/derekherbert/TravelACDZ">
-									<div class="overlay">
-										<div class="overlay-text">Travel ACDZ Android App</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-xs-5">
-							<div class="overlay-container">
-								<img src="./images/portfolio.png" class="img-responsive img-circle center-block image" title="Online Portfolio" style="border: 5px solid #000000;" height="250" width="250"/>
-								<a href="https://github.com/derekherbert/derekherbert.github.io">
-									<div class="overlay">
-										<div class="overlay-text">Portfolio</div>
-									</div>
-								</a>
-							</div>
-						</div>
+						</a>
+					</div>	
+					<div id="carousel-left" class="carousel-button">
+						<button><span class="glyphicon glyphicon-chevron-left"></span></button>
 					</div>
+				</div>
+				<div class="repo-div col-lg-2 col-md-4 col-xs-5">
+					<div class="overlay-container">
+						<img src="./images/jag.png" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/JAG">
+							<div class="overlay">
+								<div class="overlay-text">Java Application for GMail</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="repo-div col-lg-2 col-lg-offset-0 col-md-4 col-xs-5 col-xs-offset-1">
+					<div class="overlay-container">
+						<img src="./images/acdz.png" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/TravelACDZ">
+							<div class="overlay">
+								<div class="overlay-text">Travel ACDZ Android App</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="repo-div col-lg-2 col-md-4 col-xs-5">
+					<div class="overlay-container">
+						<img src="./images/portfolio.png" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/derekherbert.github.io">
+							<div class="overlay">
+								<div class="overlay-text">Portfolio</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="repo-div col-lg-2 col-md-0 col-xs-5">
+					<div class="overlay-container">
+						<img src="./images/portfolio.png" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/derekherbert.github.io">
+							<div class="overlay">
+								<div class="overlay-text">Portfolio</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="repo-div col-lg-2 col-md-0 col-xs-5">
+					<div class="overlay-container visibility-hidden">
+						<img src="./images/portfolio.png" class="repo-icon"/>
+						<a href="https://github.com/derekherbert/derekherbert.github.io">
+							<div class="overlay">
+								<div class="overlay-text">Portfolio</div>
+							</div>
+						</a>
+					</div>
+					<div id="carousel-right" class="carousel-button">
+						<button><span class="glyphicon glyphicon-chevron-right"></span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Carousel Index -->
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4">
+					<div id="carousel-index"></div>
 				</div>
 			</div>
 
