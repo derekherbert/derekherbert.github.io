@@ -231,7 +231,7 @@ function repoCollapse(e)
     
    // setTimeout(function() 
     //    {
-            var iframeBody = $(document.getElementById('repo-iframe').contentWindow).find('body');
+            var iframeBody = $(document.getElementById('repo-iframe').contentWindow.document).find('body');
             var height = parseInt(iframeBody.css('height'));
 
             //Set the height of the iframe to match its content's height
