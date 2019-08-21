@@ -1,27 +1,35 @@
 //Global Variables
 var carouselIndex = 0;
 var repos = [
-                { name:"derekherbert.github.io", img:"portfolio.png",     overlay:"Portfolio"                  },
-                { name:"BambooTempleBookStore",  img:"bamboo_temple.jpg", overlay:"Bamboo Temple eBook Store"  }, //1st visible repo 
-                { name:"JAG",                    img:"jag.png",           overlay:"Java Application for GMail" }, //2nd visible repo
-                { name:"TravelACDZ",             img:"acdz.png",          overlay:"Travel ACDZ Android App"    }, //3rd visible repo
-                { name:"derekherbert.github.io", img:"portfolio.png",     overlay:"Portfolio"                  }, //4rd visible repo
-                { name:"BambooTempleBookStore",  img:"bamboo_temple.jpg", overlay:"Bamboo Temple eBook Store"  },
-                { name:"JAG",                    img:"jag.png",           overlay:"Java Application for GMail" },
-                { name:"TravelACDZ",             img:"acdz.png",          overlay:"Travel ACDZ Android App"    },
-                { name:"TravelACDZ",             img:"acdz.png",          overlay:"Travel ACDZ Android App"    }
+                { name:"derekherbert.github.io", img:"portfolio.png",     indexPage:"/play", overlay:"Portfolio"                  },
+                { name:"TicTacToe",              img:"bamboo_temple.jpg", indexPage:"/play", overlay:"Tic Tac Toe"                }, //1st visible repo 
+                { name:"JAG",                    img:"jag.png",           indexPage:"/play", overlay:"Java Application for GMail" }, //2nd visible repo
+                { name:"TravelACDZ",             img:"acdz.png",          indexPage:"/play", overlay:"Travel ACDZ Android App"    }, //3rd visible repo
+                { name:"derekherbert.github.io", img:"portfolio.png",     indexPage:"/play", overlay:"Portfolio"                  }, //4rd visible repo
+                { name:"BambooTempleBookStore",  img:"bamboo_temple.jpg", indexPage:"/play", overlay:"Bamboo Temple eBook Store"  },
+                { name:"JAG",                    img:"jag.png",           indexPage:"/play", overlay:"Java Application for GMail" },
+                { name:"TravelACDZ",             img:"acdz.png",          indexPage:"/play", overlay:"Travel ACDZ Android App"    },
+                { name:"TravelACDZ",             img:"acdz.png",          indexPage:"/play", overlay:"Travel ACDZ Android App"    }
                 
             ];
 var imgPath = './images/';
 var githubPath = 'https://github.com/derekherbert/';
-
-
+var websitePath = 'https://derekherbert.github.io/';
 
 //Event Listeners
 $(document).ready(function() { 
     prepareCarousel(); 
     $('#carousel-left button').click(function() { carouselLeft(); });
     $('#carousel-right button').click(function() { carouselRight(); });
+    $('.overlay').click(function(e) { repoCollapse(e); });
+    $('.overlay').hover(function() 
+        {
+            $(this).css('opacity', 1);
+        }, 
+        function() {
+            $(this).css('opacity', 0);
+        }
+    );
 });    
 
 
@@ -37,7 +45,7 @@ function prepareCarousel()
     $(repos).each(function(index) 
         {
             (index < 4) ? $('#carousel-index').append('<span class="active-bullet">&bull;</span>') 
-                                       : $('#carousel-index').append('<span>&bull;</span>');
+                        : $('#carousel-index').append('<span>&bull;</span>');
         }
     );
 }
@@ -45,7 +53,7 @@ function prepareCarousel()
 function updateRepo(repo, index)
 {
     repo.find('img').attr('src', imgPath + repos[index].img);
-    repo.find('a').attr('href', githubPath + repos[index].name);
+    //repo.find('a').attr('href', githubPath + repos[index].name);
     repo.find('.overlay-text').text(repos[index].overlay);
     repo.attr('repoIndex', index);
 }
@@ -72,11 +80,11 @@ function carouselRight()
     var invisibleRightOverlay = $(activeOverlays[4]);
     var colWidth = invisibleRightOverlay.parent().css('width');
 
-    //Disable carousel-left button until animation finishes
-    $('#carousel-left button').prop('disabled', true);
+    //Disable carousel-right button until animation finishes
+    $('#carousel-right button').prop('disabled', true);
 
     //Disable overlay:hover animation until carousel animation finishes
-    $('.overlay:hover').css('opacity', 0);
+    $(allOverlays[5]).hover(function() { $(this).css('opacity', 0); });
 
     //Fade in the invisible item on the right of the carousel
     invisibleRightOverlay.removeClass('visibility-hidden');
@@ -117,7 +125,7 @@ function carouselRight()
             );
 
             //Enable carousel-right button now that the animation is finished
-            $('#carousel-left button').prop('disabled', false);
+            $('#carousel-right button').prop('disabled', false);
 
             //Update carousel index to match animation
             updateCarouselIndex();
@@ -128,7 +136,14 @@ function carouselRight()
     setTimeout(function() 
         {
             //Enable overlay:hover animation now that the carousel animation is finished
-            $('.overlay:hover').css('opacity', 1);
+            $(allOverlays[5]).hover(function() 
+                {
+                    $(this).css('opacity', 1); //Hover enter
+                }, 
+                function() {
+                    $(this).css('opacity', 0); //Hover leave
+                }
+            );
 
         }, 1450); //Starts 450ms after the carousel animation completes
 }
@@ -140,11 +155,11 @@ function carouselLeft()
     var invisibleLeftOverlay = $(activeOverlays[0]);
     var colWidth = invisibleLeftOverlay.parent().css('width');
 
-    //Disable carousel-right button until animation finishes
-    $('#carousel-right button').prop('disabled', true);
+    //Disable carousel-left button until animation finishes
+    $('#carousel-left button').prop('disabled', true);
 
     //Disable overlay:hover animation until carousel animation finishes
-    $('.overlay:hover').css('opacity', 0);
+    $(allOverlays[0]).hover(function() { $(this).css('opacity', 0); });
 
     //Fade in the invisible item on the left of the carousel
     invisibleLeftOverlay.removeClass('visibility-hidden');
@@ -184,8 +199,8 @@ function carouselLeft()
                 }
             );
 
-            //Enable carousel-right button now that the animation is finished
-            $('#carousel-right button').prop('disabled', false);
+            //Enable carousel-left button now that the animation is finished
+            $('#carousel-left button').prop('disabled', false);
 
             //Update carousel index to match animation
             updateCarouselIndex();
@@ -195,10 +210,29 @@ function carouselLeft()
     //Avoid any glitchy hover effects during the carousel animation
     setTimeout(function() 
         {
-            //Enable overlay:hover animation now that the carousel animation is finished
-            $('.overlay:hover').css('opacity', 1);
+            //Enable overlay:hover animation now that the carousel animation is finished    
+            $(allOverlays[0]).hover(function() 
+                {
+                    $(this).css('opacity', 1); //Hover enter
+                }, 
+                function() {
+                    $(this).css('opacity', 0); //Hover leave
+                }
+            );
 
         }, 1450); //Starts 450ms after the carousel animation completes
+}
+
+function repoCollapse(e) 
+{
+    var repo = repos[parseInt($(e.target).closest('.overlay').parent().attr('repoIndex'))];
+    var repoCollapse = $('#repo-collapse');
+    repoCollapse.find('iframe').attr('src', websitePath + repo.name + repo.indexPage);
+    repoCollapse.collapse("show");
+    
+    //Set the height of the iframe to match its content's height
+    alert('iframe actual height: ' + $('#repo-iframe').find('body').css('height'));
+    repoCollapse.css('height', $('#repo-iframe').find('body').css('height'));
 }
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete) {

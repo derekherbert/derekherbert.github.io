@@ -176,9 +176,7 @@ header {
     background-color: #1B96FE;
     border-radius: 100%;
     border: 5px solid #1e1e1e;
-}
-.overlay:hover {
-    opacity: 1;
+    cursor: pointer;
 }
 .overlay-text {
     color: white;
@@ -190,6 +188,11 @@ header {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+}
+#repo-collapse iframe {
+    border: none;
+    background: transparent;
+    width: 100%;
 }
 @media (max-width: 850px) {  
     .hide-mobile {
