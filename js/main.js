@@ -226,13 +226,18 @@ function carouselLeft()
 function repoCollapse(e) 
 {
     var repo = repos[parseInt($(e.target).closest('.overlay').parent().attr('repoIndex'))];
-    var repoCollapse = $('#repo-collapse');
-    repoCollapse.find('iframe').attr('src', websitePath + repo.name + repo.indexPage);
-    repoCollapse.collapse("show");
+    $('#repo-collapse').collapse("show");
+    $('#repo-iframe').attr('src', websitePath + repo.name + repo.indexPage);
     
-    //Set the height of the iframe to match its content's height
-    alert('iframe actual height: ' + $('#repo-iframe').find('body').css('height'));
-    repoCollapse.css('height', $('#repo-iframe').find('body').css('height'));
+   // setTimeout(function() 
+    //    {
+            var iframeBody = $(document.getElementById('repo-iframe').contentWindow).find('body');
+            var height = parseInt(iframeBody.css('height'));
+
+            //Set the height of the iframe to match its content's height
+            alert('new iframe actual height: ' + height);
+            $('#repo-iframe').css('height', (height + 10) + 'px');
+    //    }, 1000);
 }
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete) {
