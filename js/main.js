@@ -229,15 +229,15 @@ function repoCollapse(e)
     $('#repo-collapse').collapse("show");
     $('#repo-iframe').attr('src', websitePath + repo.name + repo.indexPage);
     
-   // setTimeout(function() 
-    //    {
+   setTimeout(function() 
+        {
             var iframeBody = $(document.getElementById('repo-iframe').contentWindow.document).find('body');
             var height = parseInt(iframeBody.css('height'));
 
             //Set the height of the iframe to match its content's height
             alert('new iframe actual height: ' + height);
             $('#repo-iframe').css('height', (height + 10) + 'px');
-    //    }, 1000);
+        }, 1000);
 }
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete) {
