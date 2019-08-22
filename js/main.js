@@ -237,7 +237,7 @@ function repoCollapse(e)
             var iframeHeight = parseInt($(document.getElementById('repo-iframe').contentWindow.document).find('body').css('height'));
             iframe.css('height', (iframeHeight + 20) + 'px');
 
-        }, 250); //250ms delay to let the iframe load
+        }, 350); //350ms delay to let the iframe load
 }
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete) {
