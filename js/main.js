@@ -53,7 +53,6 @@ function prepareCarousel()
 function updateRepo(repo, index)
 {
     repo.find('img').attr('src', imgPath + repos[index].img);
-    //repo.find('a').attr('href', githubPath + repos[index].name);
     repo.find('.overlay-text').text(repos[index].overlay);
     repo.attr('repoIndex', index);
 }
@@ -237,7 +236,7 @@ function repoCollapse(e)
             var iframeHeight = parseInt($(document.getElementById('repo-iframe').contentWindow.document).find('body').css('height'));
             iframe.css('height', (iframeHeight + 20) + 'px');
 
-        }, 350); //350ms delay to let the iframe load
+        }, 450); //450ms delay to let the iframe load
 }
 
 $.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete) {
